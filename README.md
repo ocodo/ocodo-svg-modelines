@@ -1,2 +1,5 @@
-# ocodo-svg-modelines
-a collection of beautiful, modern SVG modelines for Emacs
+# SVG emacs modelines
+
+### Coming Soon
+
+A collection of beautiful, modern SVG modelines for Emacs
