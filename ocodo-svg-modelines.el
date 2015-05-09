@@ -1,9 +1,10 @@
 ;;; ocodo-svg-modelines --- A collection of artisan SVG modelines
 ;;
-;;; Author: ocodo <what.is.ocodo@gmail.com>
-;;          Jason Milkins <jasonm23@gmail.com>
+;; Author: ocodo <what.is.ocodo@gmail.com>
 ;;
-;;; Version: 0.1.0
+;; Package-Requires: ((svg-mode-line-themes))
+;; Version: 0.1.0
+;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Commentary:
 ;;
