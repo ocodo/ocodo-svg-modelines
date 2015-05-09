@@ -1,5 +1,5 @@
-# SVG emacs modelines
+# Ocodo SVG modelines
 
-### Coming Soon
+Using [Sabof's svg-mode-line-themes]
 
-A collection of beautiful, modern SVG modelines for Emacs
+.... Docs TODO
