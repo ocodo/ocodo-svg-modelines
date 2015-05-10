@@ -30,28 +30,28 @@
         :font-size "11pt"
         :font-family "sans-serif"
         :filter nil
-        :fill (if (smt/window-active-p) "#000000" "#333333")))
+        :fill (if (smt/window-active-p) "#000000" "#777777")))
 
 (defun smt/ocodo-major-mode-style (widget)
   (list :font-weight "normal"
         :font-size "11pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) "#000000" "#333333")))
+        :fill (if (smt/window-active-p) "#000000" "#777777")))
 
 (defun smt/ocodo-info-style (widget)
   (list :font-weight "normal"
         :font-size "6pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) "#000000" "#333333")))
+        :fill (if (smt/window-active-p) "#000000" "#777777")))
 
 (defun smt/ocodo-position-info-style (widget)
   (list :font-weight "normal"
         :font-size "8pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) "#000000" "#333333")))
+        :fill (if (smt/window-active-p) "#000000" "#777777")))
 
 (defun smt/ocodo-dirty-style (widget)
   (list :font-weight "normal"
@@ -68,14 +68,14 @@
   (list :font-weight "normal"
         :font-size "6pt"
         :filter nil
-        :fill (if (smt/window-active-p) "#000000" "#333333")))
+        :fill (if (smt/window-active-p) "#000000" "#777777")))
 
 (defun smt/ocodo-version-control-style (widget)
   (list :font-weight "bold"
         :font-size "8pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) "#5D3D70" "#333333")))
+        :fill (if (smt/window-active-p) "#5D3D70" "#777777")))
 
 (smt/defrow default-left
   ;; rw/ro filename saved?

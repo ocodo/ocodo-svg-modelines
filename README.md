@@ -14,31 +14,31 @@ attempt to cater to you.
 
 ## What have I got for you so far?
 
-##### ocodo-kawaii-light-smt
+### ocodo-kawaii-light:smt
 
 ![](screenshots/ocodo-kawaii-light-smt.png)
 
-##### ocodo-minimal-light-smt
+### ocodo-minimal-light:smt
 
 ![](screenshots/ocodo-minimal-light-smt.png)
 
-##### ocodo-minimal-dark-smt
+### ocodo-minimal-dark:smt
 
 ![](screenshots/ocodo-minimal-dark-smt.png)
 
-##### ocodo-mesh-grass-smt
+### ocodo-mesh-grass:smt
 
 ![](screenshots/ocodo-mesh-grass-smt.png)
 
-##### ocodo-mesh-aqua-smt
+### ocodo-mesh-aqua:smt
 
 ![](screenshots/ocodo-mesh-aqua-smt.png)
 
-##### ocodo-steps-grass-smt
+### ocodo-steps-grass:smt
 
 ![](screenshots/ocodo-steps-grass-smt.png)
 
-##### ocodo-steps-aqua-smt
+### ocodo-steps-aqua:smt
 
 ![](screenshots/ocodo-steps-aqua-smt.png)
 
