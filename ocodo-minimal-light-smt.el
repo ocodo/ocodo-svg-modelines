@@ -9,22 +9,16 @@
 
 (require 'ocodo-smt-overrides)
 
-(setq ocodo-minimal-light:default-active "#000000")
-(setq ocodo-minimal-light:default-inactive "#333333")
-(setq ocodo-minimal-light:bg-gradient-main "#484848")
-(setq ocodo-minimal-light:bg-gradient-dark "#000000")
-(setq ocodo-minimal-light:bg-gradient-hi "#FFFFFF")
-
 (defun ocodo-minimal-light:smt/background (theme)
   (let ((width (smt/window-pixel-width))
         (height (smt/t-pixel-height theme)))
     `((\defs
        (linearGradient
         :id "twisted" :x1 "0%" :y1 "0%" :x2 "100%" :y2 "15%"
-        (stop :offset "0%"  :stop-color ,ocodo-minimal-light:bg-gradient-main :stop-opacity 0.2)
-        (stop :offset "25%" :stop-color ,ocodo-minimal-light:bg-gradient-main :stop-opacity 0.2)
-        (stop :offset "75%" :stop-color ,ocodo-minimal-light:bg-gradient-main :stop-opacity 0.2)
-        (stop :offset "100%" :stop-color ,ocodo-minimal-light:bg-gradient-dark :stop-opacity 0.2)))
+        (stop :offset "0%"  :stop-color ,"#484848" :stop-opacity 0.2)
+        (stop :offset "25%" :stop-color ,"#484848" :stop-opacity 0.2)
+        (stop :offset "75%" :stop-color ,"#484848" :stop-opacity 0.2)
+        (stop :offset "100%" :stop-color ,"#000000" :stop-opacity 0.2)))
       (rect :width "100%" :height "100%" :x 0 :y 0 :fill "#FFFFFF")
       (rect :width "100%" :height "100%" :x 0 :y 0 :fill "url(#twisted)"))))
 
@@ -36,28 +30,28 @@
         :font-size "11pt"
         :font-family "sans-serif"
         :filter nil
-        :fill (if (smt/window-active-p) ocodo-minimal-light:default-active ocodo-minimal-light:default-inactive)))
+        :fill (if (smt/window-active-p) "#000000" "#333333")))
 
 (defun smt/ocodo-major-mode-style (widget)
   (list :font-weight "normal"
         :font-size "11pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) ocodo-minimal-light:default-active ocodo-minimal-light:default-inactive)))
+        :fill (if (smt/window-active-p) "#000000" "#333333")))
 
 (defun smt/ocodo-info-style (widget)
   (list :font-weight "normal"
         :font-size "6pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) ocodo-minimal-light:default-active ocodo-minimal-light:default-inactive)))
+        :fill (if (smt/window-active-p) "#000000" "#333333")))
 
 (defun smt/ocodo-position-info-style (widget)
   (list :font-weight "normal"
         :font-size "8pt"
         :filter nil
         :font-family "sans-serif"
-        :fill (if (smt/window-active-p) ocodo-minimal-light:default-active ocodo-minimal-light:default-inactive)))
+        :fill (if (smt/window-active-p) "#000000" "#333333")))
 
 (defun smt/ocodo-dirty-style (widget)
   (list :font-weight "normal"
@@ -74,7 +68,7 @@
   (list :font-weight "normal"
         :font-size "6pt"
         :filter nil
-        :fill (if (smt/window-active-p) ocodo-minimal-light:default-active ocodo-minimal-light:default-inactive)))
+        :fill (if (smt/window-active-p) "#000000" "#333333")))
 
 (defun smt/ocodo-version-control-style (widget)
   (list :font-weight "bold"
@@ -143,8 +137,11 @@
 
 (provide 'ocodo-minimal-light-smt)
 
+;; Hi-lock: (("(\\(smt/[^ ]*\\)" (1 ' font-lock-keyword-face append)))
+;; Hi-lock: end
 ;; Local Variables:
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; eval: (hi-lock-mode)
 ;; End:
 
 ;;; ocodo-minimal-light-smt.el ends here
