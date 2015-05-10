@@ -109,7 +109,7 @@
 ;;
 ;; ## Usage
 ;;
-;;     M-x ocodo-smt-collection-one/init
+;;     M-x ocodo-svg-modelines/init
 ;;
 ;;     M-x smt/set-theme
 ;;
@@ -166,7 +166,7 @@
 (require 'svg-mode-line-themes)
 
 ;;;###autoload
-(defun ocodo-smt-collection-one/init ()
+(defun ocodo-svg-modelines/init ()
   "Initialize Ocodo's SVG Modeline collection."
   (interactive)
   (when (image-type-available-p 'svg)
