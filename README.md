@@ -14,6 +14,23 @@ attempt to cater to you.
 
 ## What have I got for you so far?
 
+Each modeline currently features
+
+- file state (rw/ro)
+- buffer filename
+- saved/unsaved state
+- Major mode
+- VC/Git branch
+- Minor modes (filtered)
+- line:col
+- vertical position percentage
+- file size
+
+See roadmap for a few ideas on the direction of the project...
+
+Anyway, without further ado, aside from this droning preable, here's the
+modeline designs I have for you so far.
+
 ### ocodo-kawaii-light:smt
 
 ![](screenshots/ocodo-kawaii-light-smt.png)
@@ -41,6 +58,27 @@ attempt to cater to you.
 ### ocodo-steps-aqua:smt
 
 ![](screenshots/ocodo-steps-aqua-smt.png)
+
+## Roadmap
+
+Direction partly depends on community feedback, however I have my own
+desires and wishes for this project, obviously. Top of my list is
+minor and major mode displays being more graphical, although I think
+these will be more experimental.
+
+I'd like to see an icon which describes the Major mode, and minor modes.
+
+Also:
+
+- Time would be nice to see as an analog graphical clock icon, which is relatively easy to achieve.
+
+- Date shown as a calendar page icon.
+
+- Version control state of the file shown graphically (some experimental stuff exists for this already.)
+
+- File file state info shown graphically (saved/unsaved changes are already shown by a splat and a checkmark)
+
+- I'm sure you can think of plenty more.
 
 ## Installation
 
