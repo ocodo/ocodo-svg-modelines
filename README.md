@@ -86,13 +86,11 @@ Manual installation is necessary at the moment. Package installation
 via MELPA will be available soon (a few days from now: 2015-05-10
 8:55AM UTC+0800)
 
-Use these steps to install:
+Follow these steps:
 
-From a terminal, where both `git` and GNU `tar` are available.
-
-    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.0
-    cd ~
-    tar cvf ocodo-svg-modelines-0.1.0.tar ocodo-svg-modelines-0.1.0
+    wget https://github.com/ocodo/ocodo-svg-modelines/archive/0.1.0.tar.gz
+    gunzip 0.1.0.tar.gz
+    mv 0.1.0.tar ~/ocodo-svg-modelines-0.1.0.tar
 
 Subsequently, from Emacs:
 
