@@ -60,9 +60,9 @@
         :font-family "sans-serif"
         :fill (if (and (or buffer-file-name buffer-offer-save) (buffer-modified-p))
                   ;; Dirty
-                  (if (smt/window-active-p) "#FF6060" "#763030")
+                  (if (smt/window-active-p) "#FF6060" "#E5B7B7")
                 ;; Untouched
-                (if (smt/window-active-p) "#3d7058" "#143519"))))
+                (if (smt/window-active-p) "#3d7058" "#A3CCA9"))))
 
 (defun smt/ocodo-minor-mode-style (widget)
   (list :font-weight "normal"
@@ -77,18 +77,20 @@
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#5D3D70" "#777777")))
 
-(smt/defrow default-left
-  ;; rw/ro filename saved?
+(smt/defrow ocodo-minimal-light:smt-left
   :widgets '(buffer-info buffer-name buffer-dirty)
+  :always-visible t
   :margin 1)
 
-(smt/defrow default-right
+(smt/defrow ocodo-minimal-light:smt-mid
   :widgets '(major-mode version-control minor-modes)
+  :always-visible t
   :align "right"
   :margin 25)
 
-(smt/defrow default-position
+(smt/defrow ocodo-minimal-light:smt-right
   :widgets '(position-info)
+  :always-visible t
   :align "right"
   :margin 1)
 
@@ -133,7 +135,9 @@
                :prototype 'buffer-name
                :style 'smt/ocodo-buffer-name-style)))
 
-  :rows (list 'default-left 'default-right 'default-position))
+  :rows (list 'ocodo-minimal-light:smt-left
+              'ocodo-minimal-light:smt-mid
+              'ocodo-minimal-light:smt-right))
 
 (provide 'ocodo-minimal-light-smt)
 
