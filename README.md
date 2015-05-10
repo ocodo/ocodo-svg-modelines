@@ -100,7 +100,7 @@ Subsequently, from Emacs:
 
 ## Usage
 
-    M-x ocodo-smt-collection-one/init
+    M-x ocodo-svg-modelines/init
 
     M-x smt/set-theme
 
