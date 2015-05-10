@@ -103,6 +103,7 @@
 ;;
 ;; Subsequently, from Emacs:
 ;;
+;;     M-x package-install <RET> svg-mode-line-themes
 ;;     M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.0.tar
 ;;
 ;; ## Usage
