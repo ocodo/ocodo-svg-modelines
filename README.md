@@ -91,8 +91,8 @@ Use these steps to install:
 From a terminal, where both `git` and GNU `tar` are available.
 
     git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.0
-
-    tar cvf ocodo-svg-modelines-0.1.0.tar ~/ocodo-svg-modelines-0.1.0
+    cd ~
+    tar cvf ocodo-svg-modelines-0.1.0.tar ocodo-svg-modelines-0.1.0
 
 Subsequently, from Emacs:
 
