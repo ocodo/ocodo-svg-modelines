@@ -12,18 +12,21 @@
 (setq ocodo-mesh-aqua:fileurl-prefix
       (concat "file://" (file-name-directory (or load-file-name buffer-file-name))))
 
-(smt/defrow default-left
+(smt/defrow ocodo-kawaii-light:smt-left
   :margin 7
+  :always-visible t
   :widgets '(buffer-info buffer-name buffer-dirty)
   :align "left")
 
-(smt/defrow default-position
+(smt/defrow ocodo-kawaii-light:smt-right
   :margin 1
+  :always-visible t
   :widgets '(position-info)
   :align "right")
 
-(smt/defrow default-right
+(smt/defrow ocodo-kawaii-light:smt-mid
   :margin 25
+  :always-visible t
   :widgets '(major-mode version-control minor-modes)
   :align "right")
 
@@ -80,9 +83,9 @@
         :font-family "sans-serif"
         :fill (if (and (or buffer-file-name buffer-offer-save) (buffer-modified-p))
                   ;; Dirty
-                  (if (smt/window-active-p) "#FF6060" "#763030")
+                  (if (smt/window-active-p) "#FF6060" "#E5B7B7")
                 ;; Untouched
-                (if (smt/window-active-p) "#3d7058" "#143519"))))
+                (if (smt/window-active-p) "#3d7058" "#A3CCA9"))))
 
 (defun smt/ocodo-kawaii-light-minor-mode-style (widget)
   (list :font-weight "normal"
@@ -136,7 +139,9 @@
                :prototype 'buffer-name
                :style 'smt/ocodo-kawaii-light-buffer-name-style)))
 
-  :rows (list 'default-left 'default-right 'default-position))
+  :rows (list 'ocodo-kawaii-light:smt-left
+              'ocodo-kawaii-light:smt-mid
+              'ocodo-kawaii-light:smt-right))
 
 (ocodo:smt/setup 17 "Menlo")
 (provide 'ocodo-kawaii-light-smt)
