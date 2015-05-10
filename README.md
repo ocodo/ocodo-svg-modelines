@@ -125,8 +125,9 @@ builds described below.
 On Linux and other *nix, Emacs 25.x is supposed to be getting a fix to allow
 loading external resources in SVG, which are used by these modelines. 
 
-However, current and older versions do not support external resource loading, so
-you will not see the mustachioed banana and other colorful stuff.
+However, current (ie. Emacs HEAD 25.0.x) and older versions do not support external 
+resource loading, so you will not see the mustachioed banana of the Kawaii modeline 
+and other colorful stuff.
 
 To mitigate this, I will be migrating externally loaded image to internal elisp based
 resources in v 0.1.1 (coming soon!) to support a wider range of builds.
