@@ -28,7 +28,7 @@ Each modeline currently features
 
 See roadmap for a few ideas on the direction of the project...
 
-Anyway, without further ado, aside from this droning preable, here's the
+Anyway, without further ado, aside from this droning preamble, here's the
 modeline designs I have for you so far.
 
 ### ocodo-kawaii-light:smt
