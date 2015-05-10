@@ -119,10 +119,17 @@ is first class.
 
 Visit https://github.com/railwaycat/homebrew-emacsmacport for more info.
 
-On Linux and other *nix, build Emacs 25.x from source (Emacs git HEAD
-from savannah.) librsvg support should include loading external
-resources in SVG, which is used by these modelines. (older versions do
-not support external resource loading.)
+Emacs homebrew builds which are not Emacs-Mac-Port will function as the Linux
+builds described below.
+
+On Linux and other *nix, Emacs 25.x is supposed to be getting a fix to allow
+loading external resources in SVG, which are used by these modelines. 
+
+However, current and older versions do not support external resource loading, so
+you will not see the mustachioed banana and other colorful stuff.
+
+To mitigate this, I will be migrating externally loaded image to internal elisp based
+resources in v 0.1.1 (coming soon!) to support a wider range of builds.
 
 ## Problems or Suggestions
 
