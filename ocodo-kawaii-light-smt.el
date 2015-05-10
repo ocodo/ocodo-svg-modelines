@@ -18,7 +18,7 @@
   :align "left")
 
 (smt/defrow default-position
-  :margin 6
+  :margin 1
   :widgets '(position-info)
   :align "right")
 
