@@ -72,11 +72,14 @@
   :pixel-height 26
   :background 'ocodo-mesh-grass:smt/background
   :overlay    'ocodo-mesh-grass:smt/overlay
-  :local-widgets
-  :style (list :font-family "sans-serif"
-               :font-weight "normal"
-               :font-size "8pt")
+  :style (lambda (theme)
+           (smt/combine-styles
+            (smt/t-style (smt/t-prototype theme))
+            (list :font-family "sans-serif"
+                  :font-weight "normal"
+                  :font-size "8pt")))
   ;;; Note order of widgets are determined by smt/defrows above.
+  :local-widgets
   (list (cons 'major-mode
               (smt/make-widget
                :prototype 'major-mode
