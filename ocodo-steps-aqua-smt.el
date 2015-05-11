@@ -47,7 +47,7 @@
   :align "right")
 
 (defun ocodo-steps-aqua:smt/background (theme)
-  (ocodo:smt/edge-image theme (concat ocodo-steps-aqua:fileurl-prefix "images/steps-aqua.svg")))
+  (ocodo:smt/edge-image theme ocodo-steps-aqua:graphic))
 
 (defun ocodo-steps-aqua:smt/overlay (theme)
   (ocodo:smt/overlay theme))
