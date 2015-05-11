@@ -14,7 +14,7 @@
 ;; Upgrade notes:
 ;;
 ;; External png and svg images are now loaded as data uri
-;; (image/png,base64 and xml/svg,utf8.) This will allow the modelines to
+;; (image/png,base64 and xml/svg,base64.) This will allow the modelines to
 ;; function fully on any Emacs build which has image-svg
 ;; support. (ie. `--with-librsvg` configured builds)
 ;;
