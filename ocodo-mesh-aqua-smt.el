@@ -26,7 +26,7 @@
 (defvar ocodo-mesh-aqua:graphic
   (concat "data:image/svg+xml;base64,"
           (ocodo-smt:string-from-file
-           (concat ocodo-mesh-aqua:images "steps-aqua.svg.base64"))))
+           (concat ocodo-mesh-aqua:images "mesh-aqua.svg.base64"))))
 
 (smt/defrow ocodo-mesh-aqua:smt-left
   :margin 5

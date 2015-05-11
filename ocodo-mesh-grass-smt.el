@@ -47,7 +47,7 @@
   :align "right")
 
 (defun ocodo-mesh-grass:smt/background (theme)
-  (ocodo:smt/edge-image theme ocodo-mesh-aqua:graphic))
+  (ocodo:smt/edge-image theme ocodo-mesh-grass:graphic))
 
 (defun ocodo-mesh-grass:smt/overlay (theme)
   (ocodo:smt/overlay theme))
