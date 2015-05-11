@@ -1,5 +1,10 @@
 ;;; ocodo-mesh-grass-smt --- Yet another attempt at a super cool modeline for Emacs
 ;;
+;; Author: ocodo <what.is.ocodo@gmail.com>
+;; Package-Requires: ((svg-mode-line-themes))
+;; Version: 0.1.1
+;; URL: https://github.com/ocodo/ocodo-svg-modelines
+;;
 ;;; Commentary:
 ;;
 ;; Made with the svg-mode-line-themes toolkit from Sabof.
@@ -19,9 +24,9 @@
   (concat "file://" ocodo-mesh-grass:folder))
 
 (defvar ocodo-mesh-grass:graphic
-  (concat "data:image/svg+xml;utf8,"
+  (concat "data:image/svg+xml;base64,"
           (ocodo-smt:string-from-file
-           (concat ocodo-mesh-grass:images "mesh-grass.svg"))))
+           (concat ocodo-mesh-grass:images "mesh-grass.svg.base64"))))
 
 (smt/defrow ocodo-mesh-grass:smt-left
   :margin 5
@@ -42,10 +47,7 @@
   :align "right")
 
 (defun ocodo-mesh-grass:smt/background (theme)
-  (ocodo:smt/edge-image theme
-                        (concat
-                         ocodo-mesh-aqua:fileurl-prefix
-                         "images/mesh-grass.svg")))
+  (ocodo:smt/edge-image theme ocodo-mesh-grass:graphic))
 
 (defun ocodo-mesh-grass:smt/overlay (theme)
   (ocodo:smt/overlay theme))

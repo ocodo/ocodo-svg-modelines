@@ -1,5 +1,10 @@
 ;;; ocodo-steps-grass-smt --- Yet another attempt at a super cool modeline for Emacs
 ;;
+;; Author: ocodo <what.is.ocodo@gmail.com>
+;; Package-Requires: ((svg-mode-line-themes))
+;; Version: 0.1.1
+;; URL: https://github.com/ocodo/ocodo-svg-modelines
+;;
 ;;; Commentary:
 ;;
 ;; Made with the svg-mode-line-themes toolkit from Sabof.
@@ -19,9 +24,9 @@
   (concat "file://" ocodo-steps-grass:folder))
 
 (defvar ocodo-steps-grass:graphic
-  (concat "data:image/svg+xml;utf8,"
+  (concat "data:image/svg+xml;base64,"
           (ocodo-smt:string-from-file
-           (concat ocodo-steps-grass:images "steps-grass.svg"))))
+           (concat ocodo-steps-grass:images "steps-grass.svg.base64"))))
 
 (smt/defrow ocodo-steps-grass:smt-left
   :margin 5
@@ -42,7 +47,7 @@
   :align "right")
 
 (defun ocodo-steps-grass:smt/background (theme)
-  (ocodo:smt/edge-image theme (concat ocodo-steps-grass:fileurl-prefix "images/steps-grass.svg")))
+  (ocodo:smt/edge-image theme ocodo-steps-grass:graphic))
 
 (defun ocodo-steps-grass:smt/overlay (theme)
   (ocodo:smt/overlay theme))
