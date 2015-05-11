@@ -1,5 +1,10 @@
 ;;; ocodo-steps-aqua-smt --- Yet another attempt at a super cool modeline for Emacs
 ;;
+;; Author: ocodo <what.is.ocodo@gmail.com>
+;; Package-Requires: ((svg-mode-line-themes))
+;; Version: 0.1.1
+;; URL: https://github.com/ocodo/ocodo-svg-modelines
+;;
 ;;; Commentary:
 ;;
 ;; Made with the svg-mode-line-themes toolkit from Sabof.
@@ -19,9 +24,8 @@
   (concat "file://" ocodo-mesh-aqua:folder))
 
 (defvar ocodo-mesh-aqua:graphic
-  (concat "data:image/svg+xml;utf8,"
-          (ocodo-smt:string-from-file
-           (concat ocodo-mesh-aqua:images "mesh-aqua.svg"))))
+   (concat (ocodo-smt:string-from-file
+            (concat ocodo-mesh-aqua:images "mesh-aqua.svg"))))
 
 (smt/defrow ocodo-mesh-aqua:smt-left
   :margin 5
@@ -42,7 +46,7 @@
   :align "right")
 
 (defun ocodo-mesh-aqua:smt/background (theme)
-  (ocodo:smt/edge-image theme (concat ocodo-mesh-aqua:graphic)))
+  (ocodo:smt/edge-svg theme (concat ocodo-mesh-aqua:graphic)))
 
 (defun ocodo-mesh-aqua:smt/overlay (theme)
   (ocodo:smt/overlay theme))
