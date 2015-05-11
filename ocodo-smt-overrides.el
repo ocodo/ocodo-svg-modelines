@@ -3,6 +3,9 @@
 ;;; Code:
 (require 'svg-mode-line-themes)
 
+(defun ocodo-smt:string-from-file (file)
+  (with-temp-buffer (insert-file-contents file) (buffer-string)))
+
 (defun smt/buffer-indicators-text (widget)
   "Provide buffer state indicators.
 WIDGET is a required param.

@@ -9,8 +9,19 @@
 
 (require 'ocodo-smt-overrides)
 
-(setq ocodo-mesh-aqua:fileurl-prefix
-      (concat "file://" (file-name-directory (or load-file-name buffer-file-name))))
+(defvar ocodo-mesh-aqua:folder
+  (file-name-directory (or load-file-name buffer-file-name)))
+
+(defvar ocodo-mesh-aqua:images
+  (concat ocodo-mesh-aqua:folder "images/"))
+
+(defvar ocodo-mesh-aqua:fileurl-prefix
+  (concat "file://" ocodo-mesh-aqua:folder))
+
+(defvar ocodo-mesh-aqua:graphic
+  (concat "data:image/svg+xml;utf8,"
+          (ocodo-smt:string-from-file
+           (concat ocodo-mesh-aqua:images "mesh-aqua.svg"))))
 
 (smt/defrow ocodo-mesh-aqua:smt-left
   :margin 5
@@ -31,7 +42,7 @@
   :align "right")
 
 (defun ocodo-mesh-aqua:smt/background (theme)
-  (ocodo:smt/edge-image theme (concat ocodo-mesh-aqua:fileurl-prefix "images/mesh-aqua.svg")))
+  (ocodo:smt/edge-image theme (concat ocodo-mesh-aqua:graphic)))
 
 (defun ocodo-mesh-aqua:smt/overlay (theme)
   (ocodo:smt/overlay theme))
