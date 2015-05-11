@@ -9,8 +9,19 @@
 
 (require 'ocodo-smt-overrides)
 
-(setq ocodo-mesh-grass:fileurl-prefix
-      (concat "file://" (file-name-directory (or load-file-name buffer-file-name))))
+(defvar ocodo-mesh-grass:folder
+  (file-name-directory (or load-file-name buffer-file-name)))
+
+(defvar ocodo-mesh-grass:images
+  (concat ocodo-mesh-grass:folder "images/"))
+
+(defvar ocodo-mesh-grass:fileurl-prefix
+  (concat "file://" ocodo-mesh-grass:folder))
+
+(defvar ocodo-mesh-grass:graphic
+  (concat "data:image/svg+xml;utf8,"
+          (ocodo-smt:string-from-file
+           (concat ocodo-mesh-grass:images "mesh-grass.svg"))))
 
 (smt/defrow ocodo-mesh-grass:smt-left
   :margin 5

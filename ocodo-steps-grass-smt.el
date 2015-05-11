@@ -9,8 +9,19 @@
 
 (require 'ocodo-smt-overrides)
 
-(setq ocodo-steps-grass:fileurl-prefix
-      (concat "file://" (file-name-directory (or load-file-name buffer-file-name))))
+(defvar ocodo-steps-grass:folder
+  (file-name-directory (or load-file-name buffer-file-name)))
+
+(defvar ocodo-steps-grass:images
+  (concat ocodo-steps-grass:folder "images/"))
+
+(defvar ocodo-steps-grass:fileurl-prefix
+  (concat "file://" ocodo-steps-grass:folder))
+
+(defvar ocodo-steps-grass:graphic
+  (concat "data:image/svg+xml;utf8,"
+          (ocodo-smt:string-from-file
+           (concat ocodo-steps-grass:images "steps-grass.svg"))))
 
 (smt/defrow ocodo-steps-grass:smt-left
   :margin 5

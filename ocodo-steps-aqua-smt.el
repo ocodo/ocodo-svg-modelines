@@ -9,8 +9,19 @@
 
 (require 'ocodo-smt-overrides)
 
-(setq ocodo-steps-aqua:fileurl-prefix
-      (concat "file://" (file-name-directory (or load-file-name buffer-file-name))))
+(defvar ocodo-steps-aqua:folder
+  (file-name-directory (or load-file-name buffer-file-name)))
+
+(defvar ocodo-steps-aqua:images
+  (concat ocodo-steps-aqua:folder "images/"))
+
+(defvar ocodo-steps-aqua:fileurl-prefix
+  (concat "file://" ocodo-steps-aqua:folder))
+
+(defvar ocodo-steps-aqua:graphic
+  (concat "data:image/svg+xml;utf8,"
+          (ocodo-smt:string-from-file
+           (concat ocodo-steps-aqua:images "steps-aqua.svg"))))
 
 (smt/defrow ocodo-steps-aqua:smt-left
   :margin 5
