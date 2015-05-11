@@ -102,9 +102,7 @@ via MELPA will be available soon (a few days from now: 2015-05-10
 
 Follow these steps:
 
-    wget https://github.com/ocodo/ocodo-svg-modelines/archive/0.1.1.tar.gz
-    gunzip 0.1.1.tar.gz
-    mv 0.1.1.tar ~/ocodo-svg-modelines-0.1.1.tar
+    git archive 0.1.1 --output=~/ocodo-svg-modelines-0.1.1.tar --prefix=ocodo-svg-modelines-0.1.1/
 
 Subsequently, from Emacs:
 
@@ -114,27 +112,29 @@ Subsequently, from Emacs:
 ## Usage
 
     M-x ocodo-svg-modelines/init
-
     M-x smt/set-theme
 
-You can then select one of the ocodo themes listed above.
+Now select one of the ocodo themes listed...
 
-## Caveat Emptor
+... and be all happy.
 
-Please note this package is quite experimental and full SVG
+## But be warned!
+
+Please be aware, this package is quite experimental and full SVG
 functionality isn't available on all Emacs builds.
 
-If you are on OS X, I recommend you use the Emacs Mac Port build, it
-is available via `brew`. It uses webkit to render SVG, so SVG support
-is first class.
+Ensure you have SVG support in your Emacs build, either use Emacs Mac
+Port on OS X or...
 
-    brew tap railwaycat/emacsmacport
-    brew install emacs-mac
+You can also build Emacs on OS X with `brew` using:
 
-Visit https://github.com/railwaycat/homebrew-emacsmacport for more info.
+    brew install emacs --HEAD --with-cocoa --with-librsvg
 
-Emacs homebrew builds which are not Emacs-Mac-Port will function as the Linux
-builds described below.
+When building Linux, `./configure` using `--with-librsvg` (ensure rsvg
+support was reported by configure.)
+
+If in doubt Librsvg is the important part. (unless you're using Emacs
+Mac Port, which uses WebKit to render SVG.)
 
 ## Problems or Suggestions
 
