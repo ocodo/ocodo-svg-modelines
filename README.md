@@ -1,5 +1,19 @@
 # Ocodo SVG modelines
 
+### Version 0.1.1
+
+Upgrade notes:
+
+External png and svg images are now loaded as data uri
+(image/png,base64 and xml/svg,utf8.) This will allow the modelines to
+function fully on any Emacs build which has image-svg
+support. (ie. `--with-librsvg` configured builds)
+
+This won't affect OS X/Emacs Mac Port users, who will already be
+enjoying full svg support.
+
+# Abstract
+
 A completely superfluous, but otherwise most excellent collection
 of awesome modelines... if not now, then at some point in the
 future, you might want, need and maybe even love these.
@@ -88,14 +102,14 @@ via MELPA will be available soon (a few days from now: 2015-05-10
 
 Follow these steps:
 
-    wget https://github.com/ocodo/ocodo-svg-modelines/archive/0.1.0.tar.gz
-    gunzip 0.1.0.tar.gz
-    mv 0.1.0.tar ~/ocodo-svg-modelines-0.1.0.tar
+    wget https://github.com/ocodo/ocodo-svg-modelines/archive/0.1.1.tar.gz
+    gunzip 0.1.1.tar.gz
+    mv 0.1.1.tar ~/ocodo-svg-modelines-0.1.1.tar
 
 Subsequently, from Emacs:
 
     M-x package-install <RET> svg-mode-line-themes
-    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.0.tar
+    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.1.tar
 
 ## Usage
 
@@ -121,16 +135,6 @@ Visit https://github.com/railwaycat/homebrew-emacsmacport for more info.
 
 Emacs homebrew builds which are not Emacs-Mac-Port will function as the Linux
 builds described below.
-
-On Linux and other *nix, Emacs 25.x is supposed to be getting a fix to allow
-loading external resources in SVG, which are used by these modelines. 
-
-However, current (ie. Emacs HEAD 25.0.x) and older versions do not support external 
-resource loading, so you will not see the mustachioed banana of the Kawaii modeline 
-and other colorful stuff.
-
-To mitigate this, I will be migrating externally loaded image to internal elisp based
-resources in v 0.1.1 (coming soon!) to support a wider range of builds.
 
 ## Problems or Suggestions
 
