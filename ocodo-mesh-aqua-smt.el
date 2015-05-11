@@ -24,8 +24,9 @@
   (concat "file://" ocodo-mesh-aqua:folder))
 
 (defvar ocodo-mesh-aqua:graphic
-   (concat (ocodo-smt:string-from-file
-            (concat ocodo-mesh-aqua:images "mesh-aqua.svg"))))
+  (concat "data:image/svg+xml;base64,"
+          (ocodo-smt:string-from-file
+           (concat ocodo-steps-grass:images "steps-aqua.svg.base64"))))
 
 (smt/defrow ocodo-mesh-aqua:smt-left
   :margin 5
@@ -46,7 +47,7 @@
   :align "right")
 
 (defun ocodo-mesh-aqua:smt/background (theme)
-  (ocodo:smt/edge-svg theme (concat ocodo-mesh-aqua:graphic)))
+  (ocodo:smt/edge-image theme ocodo-mesh-aqua:graphic))
 
 (defun ocodo-mesh-aqua:smt/overlay (theme)
   (ocodo:smt/overlay theme))

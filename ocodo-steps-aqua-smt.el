@@ -24,9 +24,9 @@
   (concat "file://" ocodo-steps-aqua:folder))
 
 (defvar ocodo-steps-aqua:graphic
-  (concat "data:image/svg+xml;utf8,"
+  (concat "data:image/svg+xml;base64,"
           (ocodo-smt:string-from-file
-           (concat ocodo-steps-aqua:images "steps-aqua.svg"))))
+           (concat ocodo-steps-aqua:images "steps-aqua.svg.base64"))))
 
 (smt/defrow ocodo-steps-aqua:smt-left
   :margin 5

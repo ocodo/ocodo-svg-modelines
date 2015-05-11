@@ -24,9 +24,9 @@
   (concat "file://" ocodo-mesh-grass:folder))
 
 (defvar ocodo-mesh-grass:graphic
-  (concat "data:image/svg+xml;utf8,"
+  (concat "data:image/svg+xml;base64,"
           (ocodo-smt:string-from-file
-           (concat ocodo-mesh-grass:images "mesh-grass.svg"))))
+           (concat ocodo-mesh-grass:images "mesh-grass.svg.base64"))))
 
 (smt/defrow ocodo-mesh-grass:smt-left
   :margin 5
