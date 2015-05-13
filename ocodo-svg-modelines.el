@@ -109,7 +109,9 @@
 ;;
 ;; ## Installation
 ;;
-;; Package installation via MELPA will be available soon
+;; Package installation via MELPA
+;;
+;;     M-x package-install RET ocodo-svg-modelines
 ;;
 ;; ## Manual Installation
 ;;
