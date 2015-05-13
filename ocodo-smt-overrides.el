@@ -3,7 +3,7 @@
 ;;; Code:
 (require 'svg-mode-line-themes)
 
-(defun ocodo-smt:string-from-file (file)
+(defun ocodo-smt-string-from-file (file)
   (with-temp-buffer (insert-file-contents file) (buffer-string)))
 
 (defun smt/buffer-indicators-text (widget)
@@ -54,7 +54,7 @@ Overrides smt core."
   :on-click (lambda (widget event)
               (message " %s " (format-mode-line mode-line-modes))))
 
-(defun ocodo:smt/setup (baseline &optional monofont)
+(defun ocodo-smt-setup (baseline &optional monofont)
   (let ((theme (cdr (assoc 'archetype smt/themes)))
         (row (cdr (assoc 'archetype smt/rows))))
     (setf (getf theme :style) (list :font-size "10pt" :font-family monofont))
@@ -64,7 +64,7 @@ Overrides smt core."
   (set-face-attribute 'mode-line-inactive nil :box nil))
 
 ;; TODO: Extend to do optional positioning etc.
-(defun ocodo:smt/edge-image (theme url)
+(defun ocodo-smt-edge-image (theme url)
   (let* ((width (smt/window-pixel-width))
          (height (smt/t-pixel-height theme)))
     `((\defs
@@ -78,7 +78,7 @@ Overrides smt core."
       (image :x -50           :y 0 :height 26 :width 100 :xlink:href ,url)
       (image :x ,(- width 50) :y 0 :height 26 :width 100 :xlink:href ,url))))
 
-(defun ocodo:smt/edge-svg (theme svg)
+(defun ocodo-smt-edge-svg (theme svg)
   (let* ((width (smt/window-pixel-width))
          (height (smt/t-pixel-height theme)))
     `((\defs
@@ -93,7 +93,7 @@ Overrides smt core."
       (svg   :x ,(- width 50) :y 0 :height 26 :width 100 ,svg))))
 
 
-(defun ocodo:smt/overlay (theme)
+(defun ocodo-smt-overlay (theme)
   (let ((width (smt/window-pixel-width))
         (height (smt/t-pixel-height theme)))
     `((\defs

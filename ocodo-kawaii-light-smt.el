@@ -14,40 +14,40 @@
 
 (require 'ocodo-smt-overrides)
 
-(defvar ocodo-kawaii-light:folder
+(defvar ocodo-kawaii-light-folder
   (file-name-directory (or load-file-name buffer-file-name)))
 
-(defvar ocodo-kawaii-light:images
-  (concat ocodo-kawaii-light:folder "images/"))
+(defvar ocodo-kawaii-light-images
+  (concat ocodo-kawaii-light-folder "images/"))
 
-(defvar ocodo-kawaii-light:fileurl-prefix
-  (concat "file://" ocodo-kawaii-light:folder))
+(defvar ocodo-kawaii-light-fileurl-prefix
+  (concat "file://" ocodo-kawaii-light-folder))
 
-(defvar ocodo-kawaii-light:graphic
+(defvar ocodo-kawaii-light-graphic
   (concat "data:image/png;base64,"
-          (ocodo-smt:string-from-file
-           (concat ocodo-kawaii-light:images
+          (ocodo-smt-string-from-file
+           (concat ocodo-kawaii-light-images
                    "rainbow-stache-banana.png.base64"))))
 
-(smt/defrow ocodo-kawaii-light:smt-left
+(smt/defrow ocodo-kawaii-light-row-left
   :margin 7
   :always-visible t
   :widgets '(buffer-info buffer-name buffer-dirty)
   :align "left")
 
-(smt/defrow ocodo-kawaii-light:smt-right
+(smt/defrow ocodo-kawaii-light-row-right
   :margin 1
   :always-visible t
   :widgets '(position-info)
   :align "right")
 
-(smt/defrow ocodo-kawaii-light:smt-mid
+(smt/defrow ocodo-kawaii-light-row-mid
   :margin 25
   :always-visible t
   :widgets '(major-mode version-control minor-modes)
   :align "right")
 
-(defun ocodo-kawaii-light:smt/background (theme)
+(defun ocodo-kawaii-light-smt-background (theme)
   (let ((bg-gradient-dark "#000000")
         (bg-gradient-main "#484848")
         (width (smt/window-pixel-width))
@@ -62,36 +62,36 @@
       (rect :width "100%" :height "100%" :x 0 :y 0 :fill "#FFFFFF")
       ;; Moustache Banana... inject your own cuteness/darkness/blanditude here
       (image :x -18 :y -12 :width 75 :height 75
-             :xlink:href ,ocodo-kawaii-light:graphic))))
+             :xlink:href ,ocodo-kawaii-light-graphic))))
 
-(defun ocodo-kawaii-light:smt/overlay (theme)
-  (ocodo:smt/overlay theme))
+(defun ocodo-kawaii-light-smt-overlay (theme)
+  (ocodo-smt-overlay theme))
 
-(defun smt/ocodo-kawaii-light-buffer-name-style (widget)
+(defun ocodo-kawaii-light-buffer-name-style (widget)
   (list :font-weight "normal"
         :font-size "11pt"
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#000000" "#777777")))
 
-(defun smt/ocodo-kawaii-light-major-mode-style (widget)
+(defun ocodo-kawaii-light-major-mode-style (widget)
   (list :font-weight "normal"
         :font-size "11pt"
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#000000" "#777777")))
 
-(defun smt/ocodo-kawaii-light-info-style (widget)
+(defun ocodo-kawaii-light-info-style (widget)
   (list :font-weight "normal"
         :font-size "6pt"
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#000000" "#777777")))
 
-(defun smt/ocodo-kawaii-light-position-info-style (widget)
+(defun ocodo-kawaii-light-position-info-style (widget)
   (list :font-weight "normal"
         :font-size "8pt"
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#000000" "#777777")))
 
-(defun smt/ocodo-kawaii-light-dirty-style (widget)
+(defun ocodo-kawaii-light-dirty-style (widget)
   (list :font-weight "normal"
         :font-size "11pt"
         :font-family "sans-serif"
@@ -101,21 +101,21 @@
                 ;; Untouched
                 (if (smt/window-active-p) "#3d7058" "#A3CCA9"))))
 
-(defun smt/ocodo-kawaii-light-minor-mode-style (widget)
+(defun ocodo-kawaii-light-minor-mode-style (widget)
   (list :font-weight "normal"
         :font-size "6pt"
         :fill (if (smt/window-active-p) "#000000" "#777777")))
 
-(defun smt/ocodo-kawaii-light-version-control-style (widget)
+(defun ocodo-kawaii-light-version-control-style (widget)
   (list :font-weight "bold"
         :font-size "8pt"
         :font-family "sans-serif"
         :fill (if (smt/window-active-p) "#5D3D70" "#777777")))
 
-(smt/deftheme ocodo-kawaii-light:smt
+(smt/deftheme ocodo-kawaii-light-smt
   :pixel-height 24
-  :background 'ocodo-kawaii-light:smt/background
-  :overlay    'ocodo-kawaii-light:smt/overlay
+  :background 'ocodo-kawaii-light-smt-background
+  :overlay    'ocodo-kawaii-light-smt-overlay
   :local-widgets
   ;;; Note order of widgets are determined by smt/defrows above, not here.
   (list (cons 'major-mode
@@ -153,11 +153,11 @@
                :prototype 'buffer-name
                :style 'smt/ocodo-kawaii-light-buffer-name-style)))
 
-  :rows (list 'ocodo-kawaii-light:smt-left
-              'ocodo-kawaii-light:smt-mid
-              'ocodo-kawaii-light:smt-right))
+  :rows (list 'ocodo-kawaii-light-row-left
+              'ocodo-kawaii-light-row-mid
+              'ocodo-kawaii-light-row-right))
 
-(ocodo:smt/setup 17 "Menlo")
+(ocodo-smt-setup 17 "Menlo")
 (provide 'ocodo-kawaii-light-smt)
 
 ;; Hi-lock: (("(\\(smt/[^ ]*\\)" (1 ' font-lock-keyword-face append)))
