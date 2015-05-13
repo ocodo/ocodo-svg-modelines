@@ -1,7 +1,7 @@
 ;;; ocodo-svg-modelines --- a collection of beautiful, modern SVG modelines
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
-;; Package-Requires: ((svg-mode-line-themes))
+;; Package-Requires: ((svg-mode-line-themes "0"))
 ;; Version: 0.1.2
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
@@ -9,7 +9,7 @@
 ;;
 ;; # Ocodo SVG modelines
 ;;
-;; ### Version 0.1.1
+;; ### Version 0.1.2
 ;;
 ;; Upgrade notes:
 ;;
@@ -53,6 +53,10 @@
 ;;
 ;; Anyway, without further ado, aside from this droning preamble, here's the
 ;; modeline designs I have for you so far.
+;;
+;; ### ocodo-geometry-flakes-smt
+;;
+;; ![](screenshots/ocodo-geometry-flakes-smt.png)
 ;;
 ;; ### ocodo-kawaii-light-smt
 ;;
@@ -105,18 +109,20 @@
 ;;
 ;; ## Installation
 ;;
-;; Manual installation is necessary at the moment. Package installation
-;; via MELPA will be available soon (a few days from now: 2015-05-10
-;; 8:55AM UTC+0800)
+;; Package installation via MELPA will be available soon
+;;
+;; ## Manual Installation
 ;;
 ;; Follow these steps:
 ;;
-;;     git archive 0.1.1 --output=~/ocodo-svg-modelines-0.1.1.tar --prefix=ocodo-svg-modelines-0.1.1/
+;;     git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.2
+;;     rm -rf ~/ocodo-svg-modelines-0.1.2/.git && cd ~
+;;     tar cf ~/ocodo-svg-modelines-0.1.2.tar ocodo-svg-modelines-0.1.2
 ;;
 ;; Subsequently, from Emacs:
 ;;
 ;;     M-x package-install <RET> svg-mode-line-themes
-;;     M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.1.tar
+;;     M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.2.tar
 ;;
 ;; ## Usage
 ;;
@@ -170,8 +176,6 @@
 ;;
 ;; https://github.com/sabof/svg-mode-line-themes
 ;;
-;; License: GNU GPL, see LICENCE file in this package for details.
-;;
 ;;; Code:
 
 (require 'svg-mode-line-themes)
@@ -183,6 +187,7 @@
   (when (image-type-available-p 'svg)
     (smt/enable)
     (require 'ocodo-kawaii-light-smt)
+    (require 'ocodo-geometry-flakes-smt)
     (require 'ocodo-minimal-light-smt)
     (require 'ocodo-minimal-dark-smt)
     (require 'ocodo-steps-aqua-smt)

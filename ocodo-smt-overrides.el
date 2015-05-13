@@ -1,8 +1,14 @@
 ;;; ocodo-smt-overrides --- Override some core parts of svg-mode-line-themes
-
+;;
+;; Author: ocodo <what.is.ocodo@gmail.com>
+;; Package-Requires: ((svg-mode-line-themes "0"))
+;; Version: 0.1.2
+;; URL: https://github.com/ocodo/ocodo-svg-modelines
+;;
 ;;; Code:
 (require 'svg-mode-line-themes)
 
+;;;###autoload
 (defun ocodo-smt-string-from-file (file)
   (with-temp-buffer (insert-file-contents file) (buffer-string)))
 
