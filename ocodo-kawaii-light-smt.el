@@ -2,7 +2,7 @@
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
 ;; Package-Requires: ((svg-mode-line-themes))
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Commentary:
@@ -121,37 +121,37 @@
   (list (cons 'major-mode
               (smt/make-widget
                :prototype 'major-mode
-               :style 'smt/ocodo-kawaii-light-major-mode-style))
+               :style 'ocodo-kawaii-light-major-mode-style))
 
         (cons 'minor-modes
               (smt/make-widget
                :prototype 'minor-modes
-               :style 'smt/ocodo-kawaii-light-minor-mode-style))
+               :style 'ocodo-kawaii-light-minor-mode-style))
 
         (cons 'version-control
               (smt/make-widget
                :prototype 'version-control
-               :style 'smt/ocodo-kawaii-light-version-control-style))
+               :style 'ocodo-kawaii-light-version-control-style))
 
         (cons 'position-info
               (smt/make-widget
                :prototype 'position-info
-               :style 'smt/ocodo-kawaii-light-position-info-style))
+               :style 'ocodo-kawaii-light-position-info-style))
 
         (cons 'buffer-info
               (smt/make-widget
                :prototype 'buffer-info
-               :style 'smt/ocodo-kawaii-light-info-style))
+               :style 'ocodo-kawaii-light-info-style))
 
         (cons 'buffer-dirty
               (smt/make-widget
                :prototype 'buffer-dirty
-               :style 'smt/ocodo-kawaii-light-dirty-style))
+               :style 'ocodo-kawaii-light-dirty-style))
 
         (cons 'buffer-name
               (smt/make-widget
                :prototype 'buffer-name
-               :style 'smt/ocodo-kawaii-light-buffer-name-style)))
+               :style 'ocodo-kawaii-light-buffer-name-style)))
 
   :rows (list 'ocodo-kawaii-light-row-left
               'ocodo-kawaii-light-row-mid

@@ -2,7 +2,7 @@
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
 ;; Package-Requires: ((svg-mode-line-themes))
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Commentary:
@@ -91,37 +91,37 @@
   (list (cons 'major-mode
               (smt/make-widget
                :prototype 'major-mode
-               :style 'smt/ocodo-minimal-dark-major-mode-style))
+               :style 'ocodo-minimal-dark-major-mode-style))
 
         (cons 'minor-modes
               (smt/make-widget
                :prototype 'minor-modes
-               :style 'smt/ocodo-minimal-dark-minor-mode-style))
+               :style 'ocodo-minimal-dark-minor-mode-style))
 
         (cons 'version-control
               (smt/make-widget
                :prototype 'version-control
-               :style 'smt/ocodo-minimal-dark-version-control-style))
+               :style 'ocodo-minimal-dark-version-control-style))
 
         (cons 'position-info
               (smt/make-widget
                :prototype 'position-info
-               :style 'smt/ocodo-minimal-dark-position-info-style))
+               :style 'ocodo-minimal-dark-position-info-style))
 
         (cons 'buffer-info
               (smt/make-widget
                :prototype 'buffer-info
-               :style 'smt/ocodo-minimal-dark-info-style))
+               :style 'ocodo-minimal-dark-info-style))
 
         (cons 'buffer-dirty
               (smt/make-widget
                :prototype 'buffer-dirty
-               :style 'smt/ocodo-minimal-dark-dirty-style))
+               :style 'ocodo-minimal-dark-dirty-style))
 
         (cons 'buffer-name
               (smt/make-widget
                :prototype 'buffer-name
-               :style 'smt/ocodo-minimal-dark-buffer-name-style)))
+               :style 'ocodo-minimal-dark-buffer-name-style)))
 
   :rows (list 'ocodo-minimal-dark-row-left 'ocodo-minimal-dark-row-right 'ocodo-minimal-dark-row-mid))
 

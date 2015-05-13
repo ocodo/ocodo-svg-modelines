@@ -2,7 +2,7 @@
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
 ;; Package-Requires: ((svg-mode-line-themes))
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Commentary:
@@ -105,37 +105,37 @@
   (list (cons 'major-mode
               (smt/make-widget
                :prototype 'major-mode
-               :style 'smt/ocodo-steps-aqua-major-mode-style))
+               :style 'ocodo-steps-aqua-major-mode-style))
 
         (cons 'minor-modes
               (smt/make-widget
                :prototype 'minor-modes
-               :style 'smt/ocodo-steps-aqua-minor-mode-style))
+               :style 'ocodo-steps-aqua-minor-mode-style))
 
         (cons 'version-control
               (smt/make-widget
                :prototype 'version-control
-               :style 'smt/ocodo-steps-aqua-version-control-style))
+               :style 'ocodo-steps-aqua-version-control-style))
 
         (cons 'position-info
               (smt/make-widget
                :prototype 'position-info
-               :style 'smt/ocodo-steps-aqua-position-info-style))
+               :style 'ocodo-steps-aqua-position-info-style))
 
         (cons 'buffer-info
               (smt/make-widget
                :prototype 'buffer-info
-               :style 'smt/ocodo-steps-aqua-info-style))
+               :style 'ocodo-steps-aqua-info-style))
 
         (cons 'buffer-dirty
               (smt/make-widget
                :prototype 'buffer-dirty
-               :style 'smt/ocodo-steps-aqua-dirty-style))
+               :style 'ocodo-steps-aqua-dirty-style))
 
         (cons 'buffer-name
               (smt/make-widget
                :prototype 'buffer-name
-               :style 'smt/ocodo-steps-aqua-buffer-name-style)))
+               :style 'ocodo-steps-aqua-buffer-name-style)))
 
   :rows (list 'ocodo-steps-aqua-row-left 'ocodo-steps-aqua-row-right 'ocodo-steps-aqua-row-mid))
 
