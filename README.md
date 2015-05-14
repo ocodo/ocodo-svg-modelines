@@ -1,3 +1,5 @@
+[![MELPA Stable](http://stable.melpa.org/packages/ocodo-svg-modelines-badge.svg)](http://stable.melpa.org/#/ocodo-svg-modelines)
+
 # Ocodo SVG modelines
 
 ### Version 0.1.2
