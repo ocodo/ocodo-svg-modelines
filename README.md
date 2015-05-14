@@ -1,4 +1,4 @@
-[![MELPA Stable](http://stable.melpa.org/packages/ocodo-svg-modelines-badge.svg)](http://stable.melpa.org/#/ocodo-svg-modelines)
+[![MELPA Stable](http://stable.melpa.org/packages/ocodo-svg-modelines-badge.svg)](http://stable.melpa.org/#/ocodo-svg-modelines) [![MELPA](http://melpa.org/packages/ocodo-svg-modelines-badge.svg)](http://melpa.org/#/ocodo-svg-modelines)
 
 # Ocodo SVG modelines
 
