@@ -2,7 +2,7 @@
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
 ;; Package-Requires: ((svg-mode-line-themes "0"))
-;; Version: 0.1.3
+;; Version: 0.1.4
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Code:

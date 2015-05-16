@@ -2,7 +2,7 @@
 
 # Ocodo SVG modelines
 
-### Version 0.1.3
+### Version 0.1.4
 
 Upgrade notes:
 
@@ -114,14 +114,14 @@ Package installation via MELPA
 
 Follow these steps:
 
-    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.3
-    rm -rf ~/ocodo-svg-modelines-0.1.3/.git && cd ~
-    tar cf ~/ocodo-svg-modelines-0.1.3.tar ocodo-svg-modelines-0.1.3
+    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.4
+    rm -rf ~/ocodo-svg-modelines-0.1.4/.git && cd ~
+    tar cf ~/ocodo-svg-modelines-0.1.4.tar ocodo-svg-modelines-0.1.4
 
 Subsequently, from Emacs:
 
     M-x package-install <RET> svg-mode-line-themes
-    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.3.tar
+    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.4.tar
 
 ## Usage
 
