@@ -69,46 +69,45 @@ Overrides smt core."
   (set-face-attribute 'mode-line nil :box nil)
   (set-face-attribute 'mode-line-inactive nil :box nil))
 
+(setq ocodo-twisted-stops '(("0%"   "#484848" 0.3)
+                            ("25%"  "#484848" 0.3)
+                            ("75%"  "#484848" 0.3)
+                            ("100%" "#000000" 0.3)))
+
 ;; TODO: Extend to do optional positioning etc.
-(defun ocodo-smt-edge-image (theme url)
-  (let* ((width (smt/window-pixel-width))
+(defun ocodo-smt-edge-image (theme url &optional extended)
+  (let* ((stops ocodo-twisted-stops)
+         (width (smt/window-pixel-width))
          (height (smt/t-pixel-height theme)))
     `((\defs
        (linearGradient
         :id "twisted" :x1 "0%" :y1 "0%" :x2 "100%" :y2 "25%"
-        (stop :offset "0%"   :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "25%"  :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "75%"  :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "100%" :stop-color "#000000" :stop-opacity 0.3)))
+        (stop :offset ,(first (nth 1 stops)) :stop-color ,(second (nth 1 stops)) :stop-opacity ,(third (nth 1 stops)))
+        (stop :offset ,(first (nth 2 stops)) :stop-color ,(second (nth 2 stops)) :stop-opacity ,(third (nth 2 stops)))
+        (stop :offset ,(first (nth 3 stops)) :stop-color ,(second (nth 3 stops)) :stop-opacity ,(third (nth 3 stops)))
+        (stop :offset ,(first (nth 4 stops)) :stop-color ,(second (nth 4 stops)) :stop-opacity ,(third (nth 4 stops)))))
       (rect  :width "100%"  :height "100%"  :x 0  :y 0  :fill "url(#twisted)"  :fill-opacity 1)
       (image :x -50           :y 0 :height 26 :width 100 :xlink:href ,url)
-      (image :x ,(- width 50) :y 0 :height 26 :width 100 :xlink:href ,url))))
+      (image :x ,(- width 50) :y 0 :height 26 :width 100 :xlink:href ,url)
+      ,extended)))
 
-(defun ocodo-smt-edge-svg (theme svg)
-  (let* ((width (smt/window-pixel-width))
-         (height (smt/t-pixel-height theme)))
-    `((\defs
-       (linearGradient
-        :id "twisted" :x1 "0%" :y1 "0%" :x2 "100%" :y2 "25%"
-        (stop :offset "0%"   :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "25%"  :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "75%"  :stop-color "#484848" :stop-opacity 0.3)
-        (stop :offset "100%" :stop-color "#000000" :stop-opacity 0.3)))
-      (rect  :width "100%"  :height "100%"  :x 0  :y 0  :fill "url(#twisted)"  :fill-opacity 1)
-      (svg   :x -50           :y 0 :height 26 :width 100 ,svg)
-      (svg   :x ,(- width 50) :y 0 :height 26 :width 100 ,svg))))
+(setq ocodo-overlay-stops '(("0%"   "#FFFFFF" 0.1)
+                            ("20%"  "#000000" 0.0)
+                            ("90%"  "#000000" 0.5)
+                            ("100%" "#000000" 0.8)))
 
-
-(defun ocodo-smt-overlay (theme)
-  (let ((width (smt/window-pixel-width))
+(defun ocodo-smt-overlay (theme &optional extended)
+  (let ((stops  ocodo-overlay-stops)
+        (width (smt/window-pixel-width))
         (height (smt/t-pixel-height theme)))
     `((\defs
        (linearGradient
         :id "over-gradient" :x1 "0%" :y1 "0%" :x2 "0%" :y2 "100%"
-        (stop :offset "0%" :style "stop-color:#FFFFFF;stop-opacity:0.1")
-        (stop :offset "20%" :style "stop-color:#000000;stop-opacity:0.0")
-        (stop :offset "90%" :style "stop-color:#000000;stop-opacity:0.5")
-        (stop :offset "100%" :style "stop-color:#000000;stop-opacity:0.8")))
-      (rect :width "100%" :height "100%" :x 0 :y 0 :fill "url(#over-gradient)"))))
+        (stop :offset ,(first (nth 1 stops)) :stop-color ,(second (nth 1 stops)) :stop-opacity ,(third (nth 1 stops)))
+        (stop :offset ,(first (nth 2 stops)) :stop-color ,(second (nth 2 stops)) :stop-opacity ,(third (nth 2 stops)))
+        (stop :offset ,(first (nth 3 stops)) :stop-color ,(second (nth 3 stops)) :stop-opacity ,(third (nth 3 stops)))
+        (stop :offset ,(first (nth 4 stops)) :stop-color ,(second (nth 4 stops)) :stop-opacity ,(third (nth 4 stops)))))
+      (rect :width "100%" :height "100%" :x 0 :y 0 :fill "url(#over-gradient)")
+      ,extended)))
 
 (provide 'ocodo-smt-overrides)
