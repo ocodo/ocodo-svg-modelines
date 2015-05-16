@@ -49,7 +49,7 @@ modeline designs I have for you so far.
 
 ### ocodo-mesh-retro-aqua-smt
 
-![](screenshots/ocodo-mesh-retro-aqua-smt)
+![](screenshots/ocodo-mesh-retro-aqua-smt.png)
 
 ### ocodo-geometry-flakes-smt
 
