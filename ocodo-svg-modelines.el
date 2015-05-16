@@ -194,6 +194,7 @@
     (require 'ocodo-minimal-dark-smt)
     (require 'ocodo-steps-aqua-smt)
     (require 'ocodo-steps-grass-smt)
+    (require 'ocodo-mesh-retro-aqua-smt)
     (require 'ocodo-mesh-aqua-smt)
     (require 'ocodo-mesh-grass-smt)))
 
