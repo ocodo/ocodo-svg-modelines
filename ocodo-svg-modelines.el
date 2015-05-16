@@ -2,14 +2,14 @@
 ;;
 ;; Author: ocodo <what.is.ocodo@gmail.com>
 ;; Package-Requires: ((svg-mode-line-themes "0"))
-;; Version: 0.1.2
+;; Version: 0.1.3
 ;; URL: https://github.com/ocodo/ocodo-svg-modelines
 ;;
 ;;; Commentary:
 ;;
 ;; # Ocodo SVG modelines
 ;;
-;; ### Version 0.1.2
+;; ### Version 0.1.3
 ;;
 ;; Upgrade notes:
 ;;
@@ -117,14 +117,14 @@
 ;;
 ;; Follow these steps:
 ;;
-;;     git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.2
-;;     rm -rf ~/ocodo-svg-modelines-0.1.2/.git && cd ~
-;;     tar cf ~/ocodo-svg-modelines-0.1.2.tar ocodo-svg-modelines-0.1.2
+;;     git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.3
+;;     rm -rf ~/ocodo-svg-modelines-0.1.3/.git && cd ~
+;;     tar cf ~/ocodo-svg-modelines-0.1.3.tar ocodo-svg-modelines-0.1.3
 ;;
 ;; Subsequently, from Emacs:
 ;;
 ;;     M-x package-install <RET> svg-mode-line-themes
-;;     M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.2.tar
+;;     M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.3.tar
 ;;
 ;; ## Usage
 ;;

@@ -2,7 +2,7 @@
 
 # Ocodo SVG modelines
 
-### Version 0.1.2
+### Version 0.1.3
 
 Upgrade notes:
 
@@ -46,6 +46,10 @@ See roadmap for a few ideas on the direction of the project...
 
 Anyway, without further ado, aside from this droning preamble, here's the
 modeline designs I have for you so far.
+
+### ocodo-mesh-retro-aqua-smt
+
+![](screenshots/ocodo-mesh-retro-aqua-smt)
 
 ### ocodo-geometry-flakes-smt
 
@@ -105,19 +109,19 @@ Also:
 Package installation via MELPA
 
     M-x package-install <RET> ocodo-svg-modelines
- 
+
 ## Manual Installation
 
 Follow these steps:
 
-    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.2
-    rm -rf ~/ocodo-svg-modelines-0.1.2/.git && cd ~
-    tar cf ~/ocodo-svg-modelines-0.1.2.tar ocodo-svg-modelines-0.1.2
-     
+    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.3
+    rm -rf ~/ocodo-svg-modelines-0.1.3/.git && cd ~
+    tar cf ~/ocodo-svg-modelines-0.1.3.tar ocodo-svg-modelines-0.1.3
+
 Subsequently, from Emacs:
 
     M-x package-install <RET> svg-mode-line-themes
-    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.2.tar
+    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.3.tar
 
 ## Usage
 
