@@ -114,9 +114,8 @@ Package installation via MELPA
 
 Follow these steps:
 
-    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.4
-    rm -rf ~/ocodo-svg-modelines-0.1.4/.git && cd ~
-    tar cf ~/ocodo-svg-modelines-0.1.4.tar ocodo-svg-modelines-0.1.4
+    git clone --depth 1 https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.4
+    tar --exclude .git -cf ~/ocodo-svg-modelines-0.1.4.tar ocodo-svg-modelines-0.1.4
 
 Subsequently, from Emacs:
 
